@@ -1,0 +1,7 @@
+Rulare teste = behave
+Rulare teste specifice = behave --tags=valoare tag (behave --tags=T1)
+Rulare teste cu raport de executie : behave -f behave_html_formatter:HTMLFormatter -o behave-report.html
+Rulare de teste specifice cu raport de executie : behave -f html-o behave-report --tags=valoarea tagului
+
+Noi ne vom folosi de comanda:
+behave -f behave_html_formatter:HTMLFormatter -o behave-report.html
