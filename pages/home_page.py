@@ -1,6 +1,9 @@
 from selenium.webdriver.common.by import By
 from browser import Browser
 import logging
+from faker import Faker
+
+fake = Faker()
 
 class Home_page(Browser):
     AUTHENTICATION_BUTTON = (By.ID, 'user_info')
@@ -40,8 +43,10 @@ class Home_page(Browser):
             user_email.send_keys("rob")
             user_email.send_keys("ert")
             user_email.send_keys("b.")
-            user_email.send_keys("0629")
-            user_email.send_keys("@gmail")
+            user_email.send_keys("06")
+            user_email.send_keys("29")
+            user_email.send_keys("@gm")
+            user_email.send_keys("ail")
             user_email.send_keys(".com")
         except Exception as i:
             logging.error(f"An error occurred while inserting the email : {str(i)}")
@@ -125,13 +130,6 @@ class Home_page(Browser):
         except Exception as i:
             logging.error(f"An error occurred while inserting the firstname and lastname : {str(i)}")
 
-    def insert_valid_email(self):
-        try:
-            valid_email = self.chrome.find_element(*self.EMAIL_INPUT)
-            valid_email.send_keys("celmufapsi@gufum.com")
-        except Exception as i:
-            logging.error(f"An error occurred while inserting the valid email : {str(i)}")
-
     def enter_password(self):
         try:
             random_password = self.chrome.find_element(*self.PASSWORD_INPUT)
@@ -155,14 +153,14 @@ class Home_page(Browser):
         try:
             v_name = self.chrome.find_element(*self.FIRSTNAME_LASTNAME)
             v_name.clear()
-            v_name.send_keys("Gustavo Fernandez")
+            v_name.send_keys("Gheoghe Moldoveanu")
         except Exception as i:
             logging.error(f"An error occurred while inserting the valid name : {str(i)}")
 
-    def fill_random_email(self):
+    def enter_random_email(self, email):
         try:
-            fill_valid_email = self.chrome.find_element(*self.EMAIL_INPUT)
-            fill_valid_email.clear()
-            fill_valid_email.send_keys("")
-        except Exception as i:
-            logging.error(f"An error occurred while inserting the valid email : {str(i)}")
+            email_field = self.chrome.find_element(*self.EMAIL_INPUT)
+            email_field.clear()
+            email_field.send_keys(email)
+        except Exception as e:
+            logging.error(f"An error occurred while entering the email: {str(e)}")
