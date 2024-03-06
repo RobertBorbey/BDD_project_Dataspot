@@ -10,15 +10,15 @@ In acest proiect voi implementa teste atât pozitive, cât și negative, pentru 
 (se poate rula în terminal comanda: _pip install -r requirements.txt). Trebuie creat un mediu virtual
 (venv) pentru proiect și să se instaleze pachetele necesare din Selenium.
 
-2. _Clonarea proiectului_ se realizează prin urmarea pașilor următori:
+2. _Clonarea proiectului_ se realizează prin intermediul următorilor pași :
 - Se deschide PyCharm și se selectează optiunea “Check out from Version Control” din meniul VCS
-- Se alege opțiunea “GitHub” și se introduce URL-ul către depozitul GitHub care conține pachetul
-- Se selectează directorul local în care se dorește clonarea proiectului și se apasă butonul “Clone”
+- Se alege opțiunea “GitHub” și se introduce URL-ul către repository-ul GitHub care conține proiectul
+- Se selectează fișierul local în care se dorește clonarea proiectului și se apasă butonul “Clone”
 
 3. _Instalarea formatter-ului HTML_ pentru BEHAVE se face prin rularea urmatoarei comenzi in terminal :
 ##### _pip install behave-html-formatter_
 
-4. _Crearea fișierului behave.ini_ se realizează prin deschiderea unui editor de text și adăugarea următorului conținut :
+4. _Crearea fișierului behave.ini_ se realizează prin deschiderea unui fișier text și adăugarea următorului conținut :
 ##### _[behave.formatters]_
 ##### _html=behave_html_formatter:HTMLFormatter_
 

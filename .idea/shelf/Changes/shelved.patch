@@ -1,0 +1,528 @@
+Index: steps/authentication_button_steps.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from behave import *\r\n\r\n@given(\"I am on the Dataspot homepage and I want to authenticate with an invalid password\")\r\ndef step_impl(context):\r\n    context.home_page.open_home_page()\r\n\r\n@when(\"I click on authentication button\")\r\ndef step_impl(context):\r\n    context.home_page.click_login_button()\r\n\r\n@when(\"I enter the valid email address\")\r\ndef step_impl(context):\r\n    context.home_page.insert_email()\r\n\r\n@when('I insert my invalid \"{user_password}\"')\r\ndef step_impl(context, user_password):\r\n    context.home_page.insert_invalid_password(user_password)\r\n\r\n@when(\"I click on sign in account button\")\r\ndef step_impl(context):\r\n    context.home_page.click_sign_in_button()\r\n\r\n@then('I receive an \"{error_message}\"')\r\ndef step_impl(context, error_message):\r\n    context.home_page.login_failed(error_message)\r\n\r\n@given(\"I am on the Dataspot homepage and I want to authenticate with an invalid email address\")\r\ndef step_impl(context):\r\n    context.home_page.open_home_page()\r\n\r\n@when(\"I click on the authentication button\")\r\ndef step_impl(context):\r\n    context.home_page.click_sign_in_button()\r\n\r\n@when('I enter an invalid \"{email_address}\"')\r\ndef step_impl(context, email_address):\r\n    context.home_page.insert_invalid_email(email_address)\r\n\r\n@when(\"I insert my valid password\")\r\ndef step_impl(context):\r\n    context.home_page.insert_password()\r\n\r\n@when(\"I click the sign in account button\")\r\ndef step_impl(context):\r\n    context.home_page.click_sign_in_button()\r\n\r\n@then(\"I receive an '{error_msg}'\")\r\ndef step_impl(context, error_msg):\r\n    context.home_page.login_failed(error_msg)\r\n\r\n@when(\"I enter my valid email address\")\r\ndef step_impl(context):\r\n    context.home_page.insert_my_email()\r\n\r\n@when(\"I enter my valid password\")\r\ndef step_impl(context):\r\n    context.home_page.insert_password()\r\n\r\n@when(\"I click on the sign in account button\")\r\ndef step_impl(context):\r\n    context.home_page.click_sign_in_button()\r\n\r\n@when(\"I am redirected to the Dataspot homepage, while connected to my account\")\r\ndef step_impl(context):\r\n    context.home_page.my_account_page()\r\n\r\n@then(\"I go to my account page and click the log out of my account button\")\r\ndef step_impl(context):\r\n    context.home_page.logout_page()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/steps/authentication_button_steps.py b/steps/authentication_button_steps.py
+--- a/steps/authentication_button_steps.py	(revision 4e55e9ad7d6901d9d45c89242969dd1f29266d8a)
++++ b/steps/authentication_button_steps.py	(date 1709760358136)
+@@ -1,69 +1,69 @@
+-from behave import *
+-
+-@given("I am on the Dataspot homepage and I want to authenticate with an invalid password")
+-def step_impl(context):
+-    context.home_page.open_home_page()
+-
+-@when("I click on authentication button")
+-def step_impl(context):
+-    context.home_page.click_login_button()
+-
+-@when("I enter the valid email address")
+-def step_impl(context):
+-    context.home_page.insert_email()
+-
+-@when('I insert my invalid "{user_password}"')
+-def step_impl(context, user_password):
+-    context.home_page.insert_invalid_password(user_password)
+-
+-@when("I click on sign in account button")
+-def step_impl(context):
+-    context.home_page.click_sign_in_button()
+-
+-@then('I receive an "{error_message}"')
+-def step_impl(context, error_message):
+-    context.home_page.login_failed(error_message)
+-
+-@given("I am on the Dataspot homepage and I want to authenticate with an invalid email address")
+-def step_impl(context):
+-    context.home_page.open_home_page()
+-
+-@when("I click on the authentication button")
+-def step_impl(context):
+-    context.home_page.click_sign_in_button()
+-
+-@when('I enter an invalid "{email_address}"')
+-def step_impl(context, email_address):
+-    context.home_page.insert_invalid_email(email_address)
+-
+-@when("I insert my valid password")
+-def step_impl(context):
+-    context.home_page.insert_password()
+-
+-@when("I click the sign in account button")
+-def step_impl(context):
+-    context.home_page.click_sign_in_button()
+-
+-@then("I receive an '{error_msg}'")
+-def step_impl(context, error_msg):
+-    context.home_page.login_failed(error_msg)
+-
+-@when("I enter my valid email address")
+-def step_impl(context):
+-    context.home_page.insert_my_email()
+-
+-@when("I enter my valid password")
+-def step_impl(context):
+-    context.home_page.insert_password()
+-
+-@when("I click on the sign in account button")
+-def step_impl(context):
+-    context.home_page.click_sign_in_button()
+-
+-@when("I am redirected to the Dataspot homepage, while connected to my account")
+-def step_impl(context):
+-    context.home_page.my_account_page()
+-
+-@then("I go to my account page and click the log out of my account button")
+-def step_impl(context):
+-    context.home_page.logout_page()
+\ No newline at end of file
++# from behave import *
++#
++# @given("I am on the Dataspot homepage and I want to authenticate with an invalid password")
++# def step_impl(context):
++#     context.home_page.open_home_page()
++#
++# @when("I click on authentication button")
++# def step_impl(context):
++#     context.home_page.click_login_button()
++#
++# @when("I enter the valid email address")
++# def step_impl(context):
++#     context.home_page.insert_email()
++#
++# @when('I insert my invalid "{user_password}"')
++# def step_impl(context, user_password):
++#     context.home_page.insert_invalid_password(user_password)
++#
++# @when("I click on sign in account button")
++# def step_impl(context):
++#     context.home_page.click_sign_in_button()
++#
++# @then('I receive an "{error_message}"')
++# def step_impl(context, error_message):
++#     context.home_page.login_failed(error_message)
++#
++# @given("I am on the Dataspot homepage and I want to authenticate with an invalid email address")
++# def step_impl(context):
++#     context.home_page.open_home_page()
++#
++# @when("I click on the authentication button")
++# def step_impl(context):
++#     context.home_page.click_sign_in_button()
++#
++# @when('I enter an invalid "{email_address}"')
++# def step_impl(context, email_address):
++#     context.home_page.insert_invalid_email(email_address)
++#
++# @when("I insert my valid password")
++# def step_impl(context):
++#     context.home_page.insert_password()
++#
++# @when("I click the sign in account button")
++# def step_impl(context):
++#     context.home_page.click_sign_in_button()
++#
++# @then("I receive an '{error_msg}'")
++# def step_impl(context, error_msg):
++#     context.home_page.login_failed(error_msg)
++#
++# @when("I enter my valid email address")
++# def step_impl(context):
++#     context.home_page.insert_my_email()
++#
++# @when("I enter my valid password")
++# def step_impl(context):
++#     context.home_page.insert_password()
++#
++# @when("I click on the sign in account button")
++# def step_impl(context):
++#     context.home_page.click_sign_in_button()
++#
++# @when("I am redirected to the Dataspot homepage, while connected to my account")
++# def step_impl(context):
++#     context.home_page.my_account_page()
++#
++# @then("I go to my account page and click the log out of my account button")
++# def step_impl(context):
++#     context.home_page.logout_page()
+\ No newline at end of file
+Index: features/dataspot_registration_button.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Check that the registration button on the Dataspot website is working properly and I can create a new account\r\n\r\n   @T4 @negativeTesting\r\n     Scenario Outline: Trying to register with an invalid name\r\n      Given I am on the Dataspot homepage and I want to register with an invalid lastname and firstname\r\n      When I click on the auth button\r\n      When I click on the registration button\r\n      When I insert an invalid \"<name_surname>\"\r\n      When I enter a valid email address\r\n      When I enter a random password\r\n      When I click on the create account button\r\n      Then An \"<error_name_msg>\" is displayed\r\n      Examples:\r\n      | name_surname       | error_name_msg |\r\n      | Szccx*%^@%#_34     | Format nevalid.|\r\n      | 1234_asgdeaszvb    | Format nevalid.|\r\n      | ASDC2345_^&Smsd    | Format nevalid.|\r\n\r\n   @T5 @positiveTesting\r\n     Scenario: Trying to register with valid credentials\r\n      Given I am on the Dataspot homepage and I want to register with valid credentials\r\n      When The authentication button is clicked\r\n      When The registration button is selected\r\n      When I fill the first field with a valid name\r\n      When A random email address is entered\r\n      When A password is entered\r\n      When I click the create account button\r\n      Then I am redirected back to the Dataspot homepage and the account was created succesfully
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/features/dataspot_registration_button.feature b/features/dataspot_registration_button.feature
+--- a/features/dataspot_registration_button.feature	(revision 4e55e9ad7d6901d9d45c89242969dd1f29266d8a)
++++ b/features/dataspot_registration_button.feature	(date 1709760358170)
+@@ -1,28 +1,28 @@
+-Feature: Check that the registration button on the Dataspot website is working properly and I can create a new account
+-
+-   @T4 @negativeTesting
+-     Scenario Outline: Trying to register with an invalid name
+-      Given I am on the Dataspot homepage and I want to register with an invalid lastname and firstname
+-      When I click on the auth button
+-      When I click on the registration button
+-      When I insert an invalid "<name_surname>"
+-      When I enter a valid email address
+-      When I enter a random password
+-      When I click on the create account button
+-      Then An "<error_name_msg>" is displayed
+-      Examples:
+-      | name_surname       | error_name_msg |
+-      | Szccx*%^@%#_34     | Format nevalid.|
+-      | 1234_asgdeaszvb    | Format nevalid.|
+-      | ASDC2345_^&Smsd    | Format nevalid.|
+-
+-   @T5 @positiveTesting
+-     Scenario: Trying to register with valid credentials
+-      Given I am on the Dataspot homepage and I want to register with valid credentials
+-      When The authentication button is clicked
+-      When The registration button is selected
+-      When I fill the first field with a valid name
+-      When A random email address is entered
+-      When A password is entered
+-      When I click the create account button
+-      Then I am redirected back to the Dataspot homepage and the account was created succesfully
+\ No newline at end of file
++#Feature: Check that the registration button on the Dataspot website is working properly and I can create a new account
++#
++#   @T4 @negativeTesting
++#     Scenario Outline: Trying to register with an invalid name
++#      Given I am on the Dataspot homepage and I want to register with an invalid lastname and firstname
++#      When I click on the auth button
++#      When I click on the registration button
++#      When I insert an invalid "<name_surname>"
++#      When I enter a valid email address
++#      When I enter a random password
++#      When I click on the create account button
++#      Then An "<error_name_msg>" is displayed
++#      Examples:
++#      | name_surname       | error_name_msg |
++#      | Szccx*%^@%#_34     | Format nevalid.|
++#      | 1234_asgdeaszvb    | Format nevalid.|
++#      | ASDC2345_^&Smsd    | Format nevalid.|
++#
++##   @T5 @positiveTesting
++##     Scenario: Trying to register with valid credentials
++##      Given I am on the Dataspot homepage and I want to register with valid credentials
++##      When The authentication button is clicked
++##      When The registration button is selected
++##      When I fill the first field with a valid name
++##      When A random email address is entered
++##      When A password is entered
++##      When I click the create account button
++##      Then I am redirected back to the Dataspot homepage and the account was created succesfully
+\ No newline at end of file
+Index: features/dataspot_authentication_button.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Check that the authentication button on the Dataspot website is working properly and I can access my account\r\n  @T1 @negativeTesting\r\n  Scenario Outline: Trying to authenticate with an invalid password\r\n    Given I am on the Dataspot homepage and I want to authenticate with an invalid password\r\n    When I click on authentication button\r\n    When I enter the valid email address\r\n    When I insert my invalid \"<password>\"\r\n    When I click on sign in account button\r\n    Then I receive an \"<error_message>\"\r\n    Examples:\r\n      | password  |error_message|\r\n      | asdasdsa  |Autentificare esuata.|\r\n      | sxvvvxc   |Autentificare esuata.|\r\n      | undoitrei |Autentificare esuata.|\r\n\r\n   @T2 @negativeTesting\r\n Scenario Outline: Trying to authenticate with an invalid email address\r\n     Given I am on the Dataspot homepage and I want to authenticate with an invalid email address\r\n     When I click on authentication button\r\n     When I enter an invalid \"<email_address>\"\r\n     When I insert my valid password\r\n     When I click on sign in account button\r\n     Then I receive an \"<error_msg>\"\r\n     Examples:\r\n     | email_address               | error_msg             |\r\n     | robert.b0629@gmail.com      | Autentificare esuata. |\r\n     | rboretb.0629@gmail.com      | Autentificare esuata. |\r\n     | robertb.0269@gmail.com      | Autentificare esuata. |\r\n\r\n    @T3 @positiveTesting\r\n  Scenario: I am on the Dataspot website homepage and I want to authenticate with the correct credentials\r\n      When I click on authentication button\r\n      When I enter my valid email address\r\n      When I enter my valid password\r\n      When I click on the sign in account button\r\n      When I am redirected to the Dataspot homepage, while connected to my account\r\n      Then I go to my account page and click the log out of my account button\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/features/dataspot_authentication_button.feature b/features/dataspot_authentication_button.feature
+--- a/features/dataspot_authentication_button.feature	(revision 4e55e9ad7d6901d9d45c89242969dd1f29266d8a)
++++ b/features/dataspot_authentication_button.feature	(date 1709760358165)
+@@ -1,37 +1,37 @@
+-Feature: Check that the authentication button on the Dataspot website is working properly and I can access my account
+-  @T1 @negativeTesting
+-  Scenario Outline: Trying to authenticate with an invalid password
+-    Given I am on the Dataspot homepage and I want to authenticate with an invalid password
+-    When I click on authentication button
+-    When I enter the valid email address
+-    When I insert my invalid "<password>"
+-    When I click on sign in account button
+-    Then I receive an "<error_message>"
+-    Examples:
+-      | password  |error_message|
+-      | asdasdsa  |Autentificare esuata.|
+-      | sxvvvxc   |Autentificare esuata.|
+-      | undoitrei |Autentificare esuata.|
+-
+-   @T2 @negativeTesting
+- Scenario Outline: Trying to authenticate with an invalid email address
+-     Given I am on the Dataspot homepage and I want to authenticate with an invalid email address
+-     When I click on authentication button
+-     When I enter an invalid "<email_address>"
+-     When I insert my valid password
+-     When I click on sign in account button
+-     Then I receive an "<error_msg>"
+-     Examples:
+-     | email_address               | error_msg             |
+-     | robert.b0629@gmail.com      | Autentificare esuata. |
+-     | rboretb.0629@gmail.com      | Autentificare esuata. |
+-     | robertb.0269@gmail.com      | Autentificare esuata. |
+-
+-    @T3 @positiveTesting
+-  Scenario: I am on the Dataspot website homepage and I want to authenticate with the correct credentials
+-      When I click on authentication button
+-      When I enter my valid email address
+-      When I enter my valid password
+-      When I click on the sign in account button
+-      When I am redirected to the Dataspot homepage, while connected to my account
+-      Then I go to my account page and click the log out of my account button
++#Feature: Check that the authentication button on the Dataspot website is working properly and I can access my account
++#  @T1 @negativeTesting
++#  Scenario Outline: Trying to authenticate with an invalid password
++#    Given I am on the Dataspot homepage and I want to authenticate with an invalid password
++#    When I click on authentication button
++#    When I enter the valid email address
++#    When I insert my invalid "<password>"
++#    When I click on sign in account button
++#    Then I receive an "<error_message>"
++#    Examples:
++#      | password  |error_message|
++#      | asdasdsa  |Autentificare esuata.|
++#      | sxvvvxc   |Autentificare esuata.|
++#      | undoitrei |Autentificare esuata.|
++#
++#   @T2 @negativeTesting
++# Scenario Outline: Trying to authenticate with an invalid email address
++#     Given I am on the Dataspot homepage and I want to authenticate with an invalid email address
++#     When I click on authentication button
++#     When I enter an invalid "<email_address>"
++#     When I insert my valid password
++#     When I click on sign in account button
++#     Then I receive an "<error_msg>"
++#     Examples:
++#     | email_address               | error_msg             |
++#     | robert.b0629@gmail.com      | Autentificare esuata. |
++#     | rboretb.0629@gmail.com      | Autentificare esuata. |
++#     | robertb.0269@gmail.com      | Autentificare esuata. |
++#
++#    @T3 @positiveTesting
++#  Scenario: I am on the Dataspot website homepage and I want to authenticate with the correct credentials
++#      When I click on authentication button
++#      When I enter my valid email address
++#      When I enter my valid password
++#      When I click on the sign in account button
++#      When I am redirected to the Dataspot homepage, while connected to my account
++#      Then I go to my account page and click the log out of my account button
+Index: steps/registration_button_steps.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from behave import *\r\nfrom faker import Faker\r\nfake = Faker()\r\n\r\n@given(\"I am on the Dataspot homepage and I want to register with an invalid lastname and firstname\")\r\ndef step_impl(context):\r\n    context.home_page.open_home_page()\r\n\r\n@when(\"I click on the auth button\")\r\ndef step_impl(context):\r\n    context.home_page.click_login_button()\r\n\r\n@when(\"I click on the registration button\")\r\ndef step_impl(context):\r\n    context.home_page.click_registration_button()\r\n\r\n@when('I insert an invalid \"{name_surname}\"')\r\ndef step_impl(context, name_surname):\r\n    context.home_page.insert_firstname_lastname(name_surname)\r\n\r\n@when(\"I enter a valid email address\")\r\ndef step_impl(context):\r\n    random_email = fake.email()\r\n    context.home_page.enter_random_email(random_email)\r\n\r\n@when(\"I enter a random password\")\r\ndef step_impl(context):\r\n    context.home_page.enter_password()\r\n\r\n@when(\"I click on the create account button\")\r\ndef step_impl(context):\r\n    context.home_page.create_account()\r\n\r\n@then('An \"{error_name_msg}\" is displayed')\r\ndef step_impl(context, error_name_msg):\r\n    context.home_page.registration_failed(error_name_msg)\r\n\r\n@given(\"I am on the Dataspot homepage and I want to register with valid credentials\")\r\ndef step_impl(context):\r\n    context.home_page.open_home_page()\r\n\r\n@when(\"The authentication button is clicked\")\r\ndef step_impl(context):\r\n    context.home_page.click_login_button()\r\n\r\n@when(\"The registration button is selected\")\r\ndef step_impl(context):\r\n    context.home_page.click_registration_button()\r\n\r\n@when(\"I fill the first field with a valid name\")\r\ndef step_impl(context):\r\n    context.home_page.valid_name()\r\n\r\n@when(\"A random email address is entered\")\r\ndef step_impl(context):\r\n    random_email = fake.email()\r\n    context.home_page.enter_random_email(random_email)\r\n\r\n@when(\"A password is entered\")\r\ndef step_impl(context):\r\n    context.home_page.enter_password()\r\n\r\n@when(\"I click the create account button\")\r\ndef step_impl(context):\r\n    context.home_page.create_account()\r\n\r\n@then(\"I am redirected back to the Dataspot homepage and the account was created succesfully\")\r\ndef step_impl(context):\r\n    context.home_page.open_home_page()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/steps/registration_button_steps.py b/steps/registration_button_steps.py
+--- a/steps/registration_button_steps.py	(revision 4e55e9ad7d6901d9d45c89242969dd1f29266d8a)
++++ b/steps/registration_button_steps.py	(date 1709760358155)
+@@ -1,69 +1,69 @@
+-from behave import *
+-from faker import Faker
+-fake = Faker()
+-
+-@given("I am on the Dataspot homepage and I want to register with an invalid lastname and firstname")
+-def step_impl(context):
+-    context.home_page.open_home_page()
+-
+-@when("I click on the auth button")
+-def step_impl(context):
+-    context.home_page.click_login_button()
+-
+-@when("I click on the registration button")
+-def step_impl(context):
+-    context.home_page.click_registration_button()
+-
+-@when('I insert an invalid "{name_surname}"')
+-def step_impl(context, name_surname):
+-    context.home_page.insert_firstname_lastname(name_surname)
+-
+-@when("I enter a valid email address")
+-def step_impl(context):
+-    random_email = fake.email()
+-    context.home_page.enter_random_email(random_email)
+-
+-@when("I enter a random password")
+-def step_impl(context):
+-    context.home_page.enter_password()
+-
+-@when("I click on the create account button")
+-def step_impl(context):
+-    context.home_page.create_account()
+-
+-@then('An "{error_name_msg}" is displayed')
+-def step_impl(context, error_name_msg):
+-    context.home_page.registration_failed(error_name_msg)
+-
+-@given("I am on the Dataspot homepage and I want to register with valid credentials")
+-def step_impl(context):
+-    context.home_page.open_home_page()
+-
+-@when("The authentication button is clicked")
+-def step_impl(context):
+-    context.home_page.click_login_button()
+-
+-@when("The registration button is selected")
+-def step_impl(context):
+-    context.home_page.click_registration_button()
+-
+-@when("I fill the first field with a valid name")
+-def step_impl(context):
+-    context.home_page.valid_name()
+-
+-@when("A random email address is entered")
+-def step_impl(context):
+-    random_email = fake.email()
+-    context.home_page.enter_random_email(random_email)
+-
+-@when("A password is entered")
+-def step_impl(context):
+-    context.home_page.enter_password()
+-
+-@when("I click the create account button")
+-def step_impl(context):
+-    context.home_page.create_account()
+-
+-@then("I am redirected back to the Dataspot homepage and the account was created succesfully")
+-def step_impl(context):
+-    context.home_page.open_home_page()
++# from behave import *
++# from faker import Faker
++# fake = Faker()
++#
++# @given("I am on the Dataspot homepage and I want to register with an invalid lastname and firstname")
++# def step_impl(context):
++#     context.home_page.open_home_page()
++#
++# @when("I click on the auth button")
++# def step_impl(context):
++#     context.home_page.click_login_button()
++#
++# @when("I click on the registration button")
++# def step_impl(context):
++#     context.home_page.click_registration_button()
++#
++# @when('I insert an invalid "{name_surname}"')
++# def step_impl(context, name_surname):
++#     context.home_page.insert_firstname_lastname(name_surname)
++#
++# @when("I enter a valid email address")
++# def step_impl(context):
++#     random_email = fake.email()
++#     context.home_page.enter_random_email(random_email)
++#
++# @when("I enter a random password")
++# def step_impl(context):
++#     context.home_page.enter_password()
++#
++# @when("I click on the create account button")
++# def step_impl(context):
++#     context.home_page.create_account()
++#
++# @then('An "{error_name_msg}" is displayed')
++# def step_impl(context, error_name_msg):
++#     context.home_page.registration_failed(error_name_msg)
++#
++# # @given("I am on the Dataspot homepage and I want to register with valid credentials")
++# # def step_impl(context):
++# #     context.home_page.open_home_page()
++# #
++# # @when("The authentication button is clicked")
++# # def step_impl(context):
++# #     context.home_page.click_login_button()
++# #
++# # @when("The registration button is selected")
++# # def step_impl(context):
++# #     context.home_page.click_registration_button()
++# #
++# # @when("I fill the first field with a valid name")
++# # def step_impl(context):
++# #     context.home_page.valid_name()
++# #
++# # @when("A random email address is entered")
++# # def step_impl(context):
++# #     random_email = fake.email()
++# #     context.home_page.enter_random_email(random_email)
++# #
++# # @when("A password is entered")
++# # def step_impl(context):
++# #     context.home_page.enter_password()
++# #
++# # @when("I click the create account button")
++# # def step_impl(context):
++# #     context.home_page.create_account()
++# #
++# # @then("I am redirected back to the Dataspot homepage and the account was created succesfully")
++# # def step_impl(context):
++# #     context.home_page.open_home_page()
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"5ab1b145-76c7-4b94-823b-182dc5468763\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/features/dataspot_filter_and_sort.feature\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/pages/home_page_filter_sort.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/steps/filter_sort_steps.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/behave-report.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/behave-report.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/features/dataspot_registration_button.feature\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/features/dataspot_registration_button.feature\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/features/dataspot_search_box.feature\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/features/dataspot_search_box.feature\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pages/home_page.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pages/home_page.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/steps/registration_button_steps.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/steps/registration_button_steps.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/steps/search_box_steps.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/steps/search_box_steps.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2cljSrrPGmFC8scyopBpwdy7zmZ\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/rober/PycharmProjects/Proiect_BDD_Mockflow&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\rober\\PycharmProjects\\Proiect_final_Dataspot\" />\r\n      <recent name=\"C:\\Users\\rober\\PycharmProjects\\Proiect_final_Dataspot\\.venv\" />\r\n      <recent name=\"C:\\Users\\rober\\PycharmProjects\\Proiect_final_Dataspot\\.venv\\Lib\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"5ab1b145-76c7-4b94-823b-182dc5468763\" name=\"Changes\" comment=\"\" />\r\n      <created>1708693062047</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1708693062047</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4e55e9ad7d6901d9d45c89242969dd1f29266d8a)
++++ b/.idea/workspace.xml	(date 1709761310833)
+@@ -5,16 +5,11 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="5ab1b145-76c7-4b94-823b-182dc5468763" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/features/dataspot_filter_and_sort.feature" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/pages/home_page_filter_sort.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/steps/filter_sort_steps.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/behave-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/behave-report.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/features/dataspot_authentication_button.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataspot_authentication_button.feature" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/features/dataspot_registration_button.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataspot_registration_button.feature" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/features/dataspot_search_box.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataspot_search_box.feature" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pages/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home_page.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/steps/authentication_button_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/authentication_button_steps.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/steps/registration_button_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/registration_button_steps.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/steps/search_box_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/search_box_steps.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -45,16 +40,17 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rober/PycharmProjects/Proiect_BDD_Mockflow&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "ignore.virus.scanning.warn.message": "true",
++    "last_opened_file_path": "C:/Users/rober/PycharmProjects/Proiect_BDD_Mockflow",
++    "settings.editor.selected.configurable": "configurable.group.appearance"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\rober\PycharmProjects\Proiect_final_Dataspot" />
+@@ -79,6 +75,17 @@
+       <updated>1708693062047</updated>
+     </task>
+     <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
