@@ -6,10 +6,10 @@ Feature: Check that the search box on the Dataspot website is working properly a
       When I click the search button
       Then I am redirected to a new page that contains the "<results_message>"
       Examples:
-      | product_name     | results_message  |
-      | logitech         | rezultate        |
-      | mouse            | rezultate        |
-      | cleste           | rezultate        |
+      | product_name     | results_message      |
+      | logitech         | Rezultatele cautarii |
+      | mouse            | Rezultatele cautarii |
+      | cleste           | Rezultatele cautarii |
 
   @T7 @negativeTesting
     Scenario Outline: Trying to search for an invalid product that is not listed on the website

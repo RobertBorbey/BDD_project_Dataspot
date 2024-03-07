@@ -16,6 +16,10 @@ def step_impl(context):
 def step_impl(context, results_message):
     context.home_page.listed_products(results_message)
 
+@given("I am on the Dataspot homepage and I want to search for an invalid product")
+def step_impl(context):
+    context.home_page.open_home_page()
+
 @when('I enter the "{invalid_product}" name in the search box')
 def step_impl(context, invalid_product):
     context.home_page.insert_invalid_product(invalid_product)
