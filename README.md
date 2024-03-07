@@ -25,6 +25,11 @@ In acest proiect voi implementa teste atât pozitive, cât și negative, pentru 
 5. _Pentru a rula testele_ și _genera rapoartele_ se folosește comanda care va rula testele automate și va genera un raport HTML sub numele de "behave-report.html" :	
 ##### _behave -f html-o behave-report.html_
 
+# Cum se poate deschide raportul de execuție a testelor proiectului fără descărcarea sau clonarea acestuia?
+Varianta cea mai simplă pe care am găsit-o este folosirea site-ului acesta pentru preview :
+##### https://htmlpreview.github.io/
+URL-ul care trebuie introdus : https://github.com/RobertBorbey/BDD_project_Dataspot/blob/main/behave-report.html
+
 _________________________________________________
 _________________________________________________
 
@@ -55,3 +60,8 @@ virtual environment (venv) for the project and to install all the required packa
 5. _To run the tests_ and _generate the reports_, the following command has to be used in order to run the automation tests
 and generate a HTML report under the name of "behave-report.html":
 ##### _behave -f html-o behave-report.html_
+
+# How to open the project's test execution report without having to download it ?
+The easiest method I have found is to use the following website to preview the report:
+##### https://htmlpreview.github.io/
+The report's URL - https://github.com/RobertBorbey/BDD_project_Dataspot/blob/main/behave-report.html
