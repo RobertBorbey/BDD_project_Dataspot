@@ -15,14 +15,14 @@ Feature: Check that the registration button on the Dataspot website is working p
       | Szccx*%^@%#_34     | Format nevalid.|
       | 1234_asgdeaszvb    | Format nevalid.|
       | ASDC2345_^&Smsd    | Format nevalid.|
-#
-#   @T5 @positiveTesting
-#     Scenario: Trying to register with valid credentials
-#      Given I am on the Dataspot homepage and I want to register with valid credentials
-#      When The authentication button is clicked
-#      When The registration button is selected
-#      When I fill the first field with a valid name
-#      When A random email address is entered
-#      When A password is entered
-#      When I click the create account button
-#      Then I am redirected back to the Dataspot homepage and the account was created succesfully
+
+   @T5 @positiveTesting
+     Scenario: Trying to register with valid credentials
+      Given I am on the Dataspot homepage and I want to register with valid credentials
+      When The authentication button is clicked
+      When The registration button is selected
+      When I fill the first field with a valid name
+      When A random email address is entered
+      When A password is entered
+      When I click the create account button
+      Then I am redirected back to the Dataspot homepage and the account was created succesfully

@@ -1,9 +1,9 @@
 # Proiect BDD (Behavior-Driven Development) - Borbey Robert - Dataspot.ro
-In acest proiect voi implementa teste atât pozitive, cât și negative, pentru următoarele :
-- Funcționalitatea de autentificare
-- Funcționalitatea de înregistrare
-- Casuța de căutare (search box)
-- Opțiunea de filtrare și de sortare a rezultatelor
+In acest proiect voi implementa teste atât pozitive, cât și negative, pentru următoarele funcționalități :
+- Autentificare
+- Înregistrare
+- Căsuța de căutare
+- Sortarea produselor
 
 # Cum se folosește și clonează proiectul? Cum se rulează testele și cum se accesează rapoartele?
 1. _Utilizarea proiectului_ presupune deschiderea acestuia în PyCharm și instalarea tuturor dependențelor
@@ -29,11 +29,11 @@ _________________________________________________
 _________________________________________________
 
 # BDD Project (Behavior-Driven Development) - Borbey Robert - Dataspot.ro
-In this project I will be implementing positive and negative tests for the following :
-- Authentication functionality
-- Registration functionality
-- Search box feature
-- Filter and sort features
+In this project I will be implementing positive and negative tests for the following functionalities :
+- Authentication
+- Registration
+- Search box
+- Sort By
 
 # How to use and clone the project? How to run the tests and how to access the reports?
 1. _To use the project_, it's required to open it in PyCharm and to install all the dependencies (you can run

@@ -3,7 +3,7 @@ from browser import Browser
 import logging
 from time import sleep
 
-class Home_page_filter_sort(Browser):
+class Homepage_sort_by(Browser):
     PC_CATEGORY_BUTTON = (By.XPATH, '//*[@id="cbp-hrmenu-tab-10"]/a')
     LAPTOP_BUTTON = (By.XPATH, '//*[@id="left-column"]/div[2]/div[1]/div[1]/a')
     DROPDOWN_BUTTON = (By.XPATH, '//*[@id="js-product-list-top"]/div/div[3]/div[1]/a')
