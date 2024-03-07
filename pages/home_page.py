@@ -96,7 +96,7 @@ class Home_page(Browser):
     def my_account_page(self):
         account_url = "https://dataspot.ro/"
         assert self.chrome.current_url == account_url
-        logging.info("Test passed : Current URL match the expected account URL")
+        logging.info("Test passed : Current URL matches the expected URL")
 
     def logout_page(self):
         self.chrome.get("https://dataspot.ro/identitate")
@@ -140,7 +140,7 @@ class Home_page(Browser):
             random_password = self.chrome.find_element(*self.PASSWORD_INPUT)
             random_password.send_keys("Macarena321")
         except Exception as i:
-            logging.error(f"An error occurred while inserting the valid password : {str(i)}")
+            logging.error(f"An error occurred while inserting the password : {str(i)}")
 
     def registration_failed(self, error_name_msg):
         error_msg = self.chrome.find_element(*self.ERROR_NAME).text
@@ -160,7 +160,7 @@ class Home_page(Browser):
             v_name.clear()
             v_name.send_keys("Gheoghe Moldoveanu")
         except Exception as i:
-            logging.error(f"An error occurred while inserting the valid name : {str(i)}")
+            logging.error(f"An error occurred while inserting the firstname and lastname : {str(i)}")
 
     def enter_random_email(self, email):
         try:

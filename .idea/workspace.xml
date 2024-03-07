@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ab1b145-76c7-4b94-823b-182dc5468763" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/features/dataspot_authentication_button.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataspot_authentication_button.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/behave-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/behave-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/dataspot_filter_and_sort.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataspot_filter_and_sort.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/dataspot_registration_button.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataspot_registration_button.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steps/authentication_button_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/authentication_button_steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home_page_filter_sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home_page_filter_sort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/filter_sort_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/filter_sort_steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/registration_button_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/registration_button_steps.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
