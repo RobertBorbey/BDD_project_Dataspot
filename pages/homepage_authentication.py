@@ -8,7 +8,7 @@ class Homepage_authentication(Browser):
     PASSWORD = (By.XPATH, '//*[@id="login-form"]//*[@name = "password"]')
     SUBMIT_LOGIN = (By.XPATH, '//*[@id="login-form"]//button[@id="submit-login"]')
     ERROR_MESSAGE = (By.XPATH, '//section[@class="login-form"]//div[@class="help-block"]//ul//li')
-    LOGOUT_BUTTON = (By.XPATH, '//*[@id="content"]//div[@class="row"]//div//a//span//i[@class="fa fa-sign-out fa-fw"]')
+    LOGOUT_BUTTON = (By.XPATH, '//*[@id="content"]/div/div[1]/a[8]')
 
     def open_home_page(self):
         self.chrome.get("https://dataspot.ro/")

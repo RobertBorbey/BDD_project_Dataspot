@@ -38,13 +38,13 @@ class Homepage_sort_by(Browser):
         laptop_url = "https://dataspot.ro/26-laptop"
         assert self.chrome.current_url == laptop_url
         logging.info("Test passed : Current URL matches the expected URL")
-        sleep(4)
+        sleep(5)
 
     def sort_dropdown(self):
         try:
             sort_button = self.chrome.find_element(*self.DROPDOWN_BUTTON)
             sort_button.click()
-            sleep(4)
+            sleep(5)
         except Exception as i:
             logging.error(f"An error occurred while selecting the 'Sort By' dropdown : {str(i)}")
 
@@ -52,7 +52,7 @@ class Homepage_sort_by(Browser):
         try:
             availability_button = self.chrome.find_element(*self.AVAILABILITY_BUTTON)
             availability_button.click()
-            sleep(4)
+            sleep(5)
         except Exception as i:
             logging.error(f"An error occurred when selecting the 'Disponibilitate' button from the dropdown : {str(i)}")
 
@@ -65,7 +65,7 @@ class Homepage_sort_by(Browser):
         try:
             ascending_button = self.chrome.find_element(*self.ASCENDING_BUTTON)
             ascending_button.click()
-            sleep(4)
+            sleep(5)
         except Exception as i:
             logging.error(f"An error occurred when selecting the 'Pret - crescator' button from the dropdown: {str(i)}")
 
@@ -78,7 +78,7 @@ class Homepage_sort_by(Browser):
         try:
             descending_button = self.chrome.find_element(*self.DESCENDING_BUTTON)
             descending_button.click()
-            sleep(4)
+            sleep(5)
         except Exception as i:
             logging.error(f"An error occurred when selecting 'Pret - descrescator' button from the dropdown : {str(i)}")
 
@@ -91,7 +91,7 @@ class Homepage_sort_by(Browser):
         try:
             newest_button = self.chrome.find_element(*self.NEWEST_BUTTON)
             newest_button.click()
-            sleep(4)
+            sleep(5)
         except Exception as i:
             logging.error(f"An error occurred while selecting the 'Cele mai noi' button from the dropdown : {str(i)}")
 

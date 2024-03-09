@@ -14,7 +14,7 @@ def step_impl(context):
 def step_impl(context):
     context.homepage_registration.click_registration_button()
 
-@when('I insert an invalid "{name_surname}"')
+@when('I insert "{name_surname}" as the invalid name')
 def step_impl(context, name_surname):
     context.homepage_registration.insert_firstname_lastname(name_surname)
 
@@ -31,7 +31,7 @@ def step_impl(context):
 def step_impl(context):
     context.homepage_registration.create_account()
 
-@then('An "{error_name_msg}" is displayed')
+@then('"{error_name_msg}" is displayed')
 def step_impl(context, error_name_msg):
     context.homepage_registration.registration_failed(error_name_msg)
 

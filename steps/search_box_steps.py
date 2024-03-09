@@ -4,7 +4,7 @@ from behave import *
 def step_impl(context):
     context.homepage_search_box.open_home_page()
 
-@when('I enter the "{product_name}" in the search box')
+@when('I enter "{product_name}" in the search box')
 def step_impl(context, product_name):
     context.homepage_search_box.insert_valid_product(product_name)
 
@@ -12,7 +12,7 @@ def step_impl(context, product_name):
 def step_impl(context):
     context.homepage_search_box.click_search_button()
 
-@then('I am redirected to a new page that contains the "{results_message}"')
+@then('I am redirected to a new page that contains "{results_message}"')
 def step_impl(context, results_message):
     context.homepage_search_box.listed_products(results_message)
 
@@ -20,7 +20,7 @@ def step_impl(context, results_message):
 def step_impl(context):
     context.homepage_search_box.open_home_page()
 
-@when('I enter the "{invalid_product}" name in the search box')
+@when('I enter "{invalid_product}" name in the search box')
 def step_impl(context, invalid_product):
     context.homepage_search_box.insert_invalid_product(invalid_product)
 

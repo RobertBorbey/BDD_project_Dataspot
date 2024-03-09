@@ -12,7 +12,7 @@ def step_impl(context):
 def step_impl(context):
     context.homepage_authentication.insert_email()
 
-@when('I insert my invalid "{user_password}"')
+@when('I insert "{user_password}" as the invalid password')
 def step_impl(context, user_password):
     context.homepage_authentication.insert_invalid_password(user_password)
 
@@ -20,7 +20,7 @@ def step_impl(context, user_password):
 def step_impl(context):
     context.homepage_authentication.click_sign_in_button()
 
-@then('I receive an "{error_message}"')
+@then('I receive "{error_message}"')
 def step_impl(context, error_message):
     context.homepage_authentication.login_failed(error_message)
 
@@ -32,7 +32,7 @@ def step_impl(context):
 def step_impl(context):
     context.homepage_authentication.click_sign_in_button()
 
-@when('I enter an invalid "{email_address}"')
+@when('I enter "{email_address}" as the invalid email address')
 def step_impl(context, email_address):
     context.homepage_authentication.insert_invalid_email(email_address)
 
@@ -44,7 +44,7 @@ def step_impl(context):
 def step_impl(context):
     context.homepage_authentication.click_sign_in_button()
 
-@then("I receive an '{error_msg}'")
+@then('I get "{error_msg}"')
 def step_impl(context, error_msg):
     context.homepage_authentication.login_failed(error_msg)
 
