@@ -22,10 +22,10 @@ Feature: Check that the authentication button on the Dataspot website is working
      When I click on sign in account button
      Then I receive an "<error_msg>"
      Examples:
-     | email_address               | error_msg       |
-     | robert.b0629@gmail.com      | reCaptcha error |
-     | rboretb.0629@gmail.com      | reCaptcha error |
-     | robertb.0269@gmail.com      | reCaptcha error |
+     | email_address          | error_msg       |
+     | robert.b0629@gmail.com | reCaptcha error |
+     | rboretb.0629@gmail.com | reCaptcha error |
+     | robertb.0269@gmail.com | reCaptcha error |
 
     @T3 @positiveTesting
   Scenario: I am on the Dataspot website homepage and I want to authenticate with the correct credentials

@@ -1,5 +1,4 @@
 Feature: Check that the registration button on the Dataspot website is working properly and I can create a new account
-
    @T4 @negativeTesting
      Scenario Outline: Trying to register with an invalid name
       Given I am on the Dataspot homepage and I want to register with an invalid lastname and firstname

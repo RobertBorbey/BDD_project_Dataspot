@@ -3,10 +3,10 @@ from browser import Browser
 import logging
 
 class Homepage_search_box(Browser):
-    SEARCH_BOX = (By.XPATH, '//*[@id="search_widget"]/form/div[1]/input')
-    SEARCH_BUTTON = (By.XPATH, '//*[@id="search_widget"]/form/div[1]/button')
-    RESULTS_MSG = (By.XPATH, '//*[@id="wrapper"]/div[1]/nav/div/div[1]/ol/li[2]/span')
-    NO_PRODUCTS_MESSAGE = (By.XPATH, '//*[@id="products"]/div')
+    SEARCH_BOX = (By.XPATH, '//*[@id="search_widget"]//input[@type="text"]')
+    SEARCH_BUTTON = (By.XPATH, '//*[@id="search_widget"]//button[@class="search-btn"]')
+    RESULTS_MSG = (By.XPATH, '//*[@id="wrapper"]/div/nav/div/div/ol/li/span')
+    NO_PRODUCTS_MESSAGE = (By.XPATH, '//div[@id="content-wrapper"]//div[@role="alert"]')
 
     def open_home_page(self):
         self.chrome.get("https://dataspot.ro/")

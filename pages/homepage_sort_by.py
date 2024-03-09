@@ -4,13 +4,13 @@ import logging
 from time import sleep
 
 class Homepage_sort_by(Browser):
-    PC_CATEGORY_BUTTON = (By.XPATH, '//*[@id="cbp-hrmenu-tab-10"]/a')
-    LAPTOP_BUTTON = (By.XPATH, '//*[@id="left-column"]/div[2]/div[1]/div[1]/a')
-    DROPDOWN_BUTTON = (By.XPATH, '//*[@id="js-product-list-top"]/div/div[3]/div[1]/a')
-    AVAILABILITY_BUTTON = (By.XPATH, '//*[@id="js-product-list-top"]/div/div[3]/div[1]/div/a[1]')
-    ASCENDING_BUTTON = (By.XPATH, '//*[@id="js-product-list-top"]/div/div[3]/div[1]/div/a[2]')
-    DESCENDING_BUTTON = (By.XPATH, '//*[@id="js-product-list-top"]/div/div[3]/div[1]/div/a[3]')
-    NEWEST_BUTTON = (By.XPATH, '//*[@id="js-product-list-top"]/div/div[3]/div[1]/div/a[4]')
+    PC_CATEGORY_BUTTON = (By.XPATH, '//nav[@id="cbp-hrmenu"]/ul/li/a')
+    LAPTOP_BUTTON = (By.XPATH, '//div[@class="row"]/div/a')
+    DROPDOWN_BUTTON = (By.XPATH, '//a[@class="select-title expand-more form-control"]//i[@class="fas fa fa-angle-down"]')
+    AVAILABILITY_BUTTON = (By.XPATH, '//div[@class="dropdown-menu show"]/a[1]')
+    ASCENDING_BUTTON = (By.XPATH, '//div[@class="dropdown-menu show"]/a[2]')
+    DESCENDING_BUTTON = (By.XPATH, '//div[@class="dropdown-menu show"]/a[3]')
+    NEWEST_BUTTON = (By.XPATH, '//div[@class="dropdown-menu show"]/a[4]')
 
     def open_home_page(self):
         self.chrome.get("https://dataspot.ro/")
@@ -38,13 +38,13 @@ class Homepage_sort_by(Browser):
         laptop_url = "https://dataspot.ro/26-laptop"
         assert self.chrome.current_url == laptop_url
         logging.info("Test passed : Current URL matches the expected URL")
-        sleep(5)
+        sleep(4)
 
     def sort_dropdown(self):
         try:
             sort_button = self.chrome.find_element(*self.DROPDOWN_BUTTON)
             sort_button.click()
-            sleep(5)
+            sleep(4)
         except Exception as i:
             logging.error(f"An error occurred while selecting the 'Sort By' dropdown : {str(i)}")
 
@@ -52,7 +52,7 @@ class Homepage_sort_by(Browser):
         try:
             availability_button = self.chrome.find_element(*self.AVAILABILITY_BUTTON)
             availability_button.click()
-            sleep(5)
+            sleep(4)
         except Exception as i:
             logging.error(f"An error occurred when selecting the 'Disponibilitate' button from the dropdown : {str(i)}")
 
@@ -65,7 +65,7 @@ class Homepage_sort_by(Browser):
         try:
             ascending_button = self.chrome.find_element(*self.ASCENDING_BUTTON)
             ascending_button.click()
-            sleep(5)
+            sleep(4)
         except Exception as i:
             logging.error(f"An error occurred when selecting the 'Pret - crescator' button from the dropdown: {str(i)}")
 
@@ -78,7 +78,7 @@ class Homepage_sort_by(Browser):
         try:
             descending_button = self.chrome.find_element(*self.DESCENDING_BUTTON)
             descending_button.click()
-            sleep(5)
+            sleep(4)
         except Exception as i:
             logging.error(f"An error occurred when selecting 'Pret - descrescator' button from the dropdown : {str(i)}")
 
@@ -91,7 +91,7 @@ class Homepage_sort_by(Browser):
         try:
             newest_button = self.chrome.find_element(*self.NEWEST_BUTTON)
             newest_button.click()
-            sleep(5)
+            sleep(4)
         except Exception as i:
             logging.error(f"An error occurred while selecting the 'Cele mai noi' button from the dropdown : {str(i)}")
 
