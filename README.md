@@ -1,4 +1,5 @@
-# Proiect BDD (Behavior-Driven Development) - Borbey Robert - Dataspot.ro
+# Proiect Testare Automată - BDD (Behavior-Driven Development) - Borbey Robert - Dataspot.ro
+
 In acest proiect voi implementa teste atât pozitive, cât și negative, pentru următoarele funcționalități :
 - Autentificare
 - Înregistrare
@@ -6,34 +7,42 @@ In acest proiect voi implementa teste atât pozitive, cât și negative, pentru 
 - Sortarea produselor
 
 # Cum se folosește și clonează proiectul? Cum se rulează testele și cum se accesează rapoartele?
-1. _Utilizarea proiectului_ presupune deschiderea acestuia în PyCharm și instalarea tuturor dependențelor
-(se poate rula în terminal comanda: _pip install -r requirements.txt). Trebuie creat un mediu virtual
-(venv) pentru proiect și să se instaleze pachetele necesare din Selenium.
 
-2. _Clonarea proiectului_ se realizează prin intermediul următorilor pași :
-- Se deschide PyCharm și se selectează optiunea “Check out from Version Control” din meniul VCS
-- Se alege opțiunea “GitHub” și se introduce URL-ul către repository-ul GitHub care conține proiectul
-- Se selectează fișierul local în care se dorește clonarea proiectului și se apasă butonul “Clone”
+1) _Pentru a utiliza proiectul în PyCharm_ trebuie să deschideți proiectul în PyCharm și să vă asigurați că toate dependințele sunt instalate. 
+Se poate realiza prin rularea următoarei comenzi în terminal: _pip install -r requirements.txt_ . Este recomandată crearea unui mediu virtual (venv) 
+pentru proiect și instalarea pachetelor necesare din Selenium.
 
-3. _Instalarea formatter-ului HTML_ pentru BEHAVE se face prin rularea urmatoarei comenzi in terminal :
+2) _Clonarea proiectului_ se realizează prin parcurgerea pașilor următori :
+- Deschideți PyCharm și accesați opțiunea "Check out from Version Control" din meniul VCS
+- Alegeți "GitHub" și introduceți URL-ul către repository-ul GitHub care conține proiectul
+- Selectați locația locală unde doriți să clonați proiectul și apăsați "Clone"
+
+3) _Pentru a instala formatter-ul HTML pentru BEHAVE_ trebuie să rulați următoarea comandă în terminal : 
 ##### _pip install behave-html-formatter_
+Acest pas este esențial pentru a formata rapoartele generate de BEHAVE într-un mod ușor de citit și accesibil.
 
-4. _Crearea fișierului behave.ini_ se realizează prin deschiderea unui fișier text și adăugarea următorului conținut :
+4) _Crearea fișierului behave.ini_ se realizează prin deschiderea unui fișier text și adăugarea următorului conținut în acesta :
 ##### _[behave.formatters]_
 ##### _html=behave_html_formatter:HTMLFormatter_
 
-5. _Pentru a rula testele_ și _genera rapoartele_ se folosește comanda care va rula testele automate și va genera un raport HTML sub numele de "behave-report.html" :	
+5) _Rularea testelor și generarea rapoartelor_ presupune utilizarea următoarei comenzi în terminal pentru a rula testele automate și pentru a genera un raport HTML sub numele de behave-report.html :	
 ##### _behave -f html-o behave-report.html_
 
+6) După rularea testelor, puteți _accesa rapoartele_ deschizând fișierul “behave-report.html” menționat mai sus, într-un browser web. Acesta va conține rezultatele testelor și poate fi personalizat prin modificarea fișierului.
+
 # Cum se poate deschide raportul de execuție a testelor proiectului fără descărcarea sau clonarea acestuia?
+
 Varianta cea mai simplă pe care am găsit-o este folosirea site-ului acesta pentru preview :
+
 ##### https://htmlpreview.github.io/
+
 URL-ul care trebuie introdus : https://github.com/RobertBorbey/BDD_project_Dataspot/blob/main/behave-report.html
 
 _________________________________________________
 _________________________________________________
 
-# BDD Project (Behavior-Driven Development) - Borbey Robert - Dataspot.ro
+# Automated Testing Project - BDD (Behavior-Driven Development) - Borbey Robert - Dataspot.ro
+
 In this project I will be implementing positive and negative tests for the following functionalities :
 - Authentication
 - Registration
@@ -41,27 +50,33 @@ In this project I will be implementing positive and negative tests for the follo
 - Sort By
 
 # How to use and clone the project? How to run the tests and how to access the reports?
-1. _To use the project_, it's required to open it in PyCharm and to install all the dependencies (you can run
-the following command in the terminal : _pip install -r requirements.txt_). It is also required to create a
-virtual environment (venv) for the project and to install all the required packages from Selenium.
 
-2. _Cloning the project_ involves following these steps:
-- Open PyCharm and select the option "Check out from Version Control", from the VCS menu
-- Choose the option "GitHub" and insert the URL of the GitHub repository that contains the package
-- Select the local directory in which you want to clone the project and press the "Clone" button
+1. _To utilize the project in PyCharm_ , open the project in PyCharm and ensure all dependencies are installed. 
+This can be done by running the following command in the terminal: _pip install -r requirements.txt_ . It is recommended to create a virtual environment (venv)
+for the project and install necessary packages from Selenium.
 
-3. _The installation of the HTMLFormatter_ for BEHAVE is done by running the following command in the terminal:
+2. _Cloning the project_ is done by following these steps:
+- Open PyCharm and access the "Check out from Version Control" option from the VCS menu.
+- Choose "GitHub" and enter the URL to the GitHub repository containing the project.
+- Select the local location where you want to clone the project and click "Clone".
+
+3. _To install the HTML formatter for BEHAVE_ , run the following command in the terminal:
 ##### _pip install behave-html-formatter_
+This step is essential to format the reports generated by BEHAVE in a readable and accessible manner.
 
-4. _To create the behave.ini file_ it is required to open a text editor and to add the following content:
+4. _Creating the behave.ini file_ is done by opening a text file and adding the following content to it:
 ##### _[behave.formatters]_
 ##### _html=behave_html_formatter:HTMLFormatter_
 
-5. _To run the tests_ and _generate the reports_, the following command has to be used in order to run the automation tests
-and generate a HTML report under the name of "behave-report.html":
+5. _Running the tests and generating the reports_ involves using the following command in the terminal to run the automated tests and generate an HTML report named "behave-report.html" :
 ##### _behave -f html-o behave-report.html_
 
+6. After running the tests, you can _access the reports_ by opening the "behave-report.html" file mentioned above in a web browser. It will contain the test results and can be customized by modifying the file.
+
 # How to open the project's test execution report without having to download it ?
+
 The easiest method I have found is to use the following website to preview the report:
+
 ##### https://htmlpreview.github.io/
+
 The report's URL - https://github.com/RobertBorbey/BDD_project_Dataspot/blob/main/behave-report.html
