@@ -8,13 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behave-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/behave-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/dataspot_authentication_button.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataspot_authentication_button.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/dataspot_registration_button.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataspot_registration_button.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/dataspot_search_box.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataspot_search_box.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/homepage_authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/homepage_authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/homepage_registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/homepage_registration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/homepage_sort_by.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/homepage_sort_by.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steps/authentication_button_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/authentication_button_steps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steps/registration_button_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/registration_button_steps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steps/search_box_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/steps/search_box_steps.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -8,10 +8,10 @@ Feature: Check that the authentication button on the Dataspot website is working
     When I click on sign in account button
     Then I receive "<error_message>"
     Examples:
-      | password  | error_message   |
-      | asdasdsa  | Autentificare esuata. |
-      | sxvvvxc   | Autentificare esuata. |
-      | undoitrei | Autentificare esuata. |
+      | password   | error_message   |
+      | asdasdsa   | Autentificare esuata. |
+      | @321412asd | Autentificare esuata. |
+      | undoitrei  | Autentificare esuata. |
 
    @T2 @negativeTesting
  Scenario Outline: Trying to authenticate with an invalid email address

@@ -1,4 +1,7 @@
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
 from browser import Browser
 import logging
 from faker import Faker
@@ -16,6 +19,14 @@ class Homepage_registration(Browser):
 
     def open_home_page(self):
         self.chrome.get("https://dataspot.ro/")
+        try:
+            my_account_button = WebDriverWait(self.chrome, 20).until(
+                EC.presence_of_element_located((By.LINK_TEXT, 'Autentificare')))
+            actions = ActionChains(self.chrome)
+            actions.move_to_element(my_account_button).perform()
+            my_account_button.is_displayed()
+        except Exception as i:
+            logging.error(f"An error occurred while checking if the authentication button is available : {str(i)}")
 
     def click_login_button(self):
         max_try = 3

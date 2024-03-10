@@ -1,14 +1,19 @@
+from selenium.common import TimeoutException
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from browser import Browser
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import logging
 
 class Homepage_authentication(Browser):
     AUTHENTICATION_BUTTON = (By.ID, 'user_info')
     EMAIL_ADDRESS = (By.XPATH, '//*[@id="login-form"]//input[@name = "email"]')
     PASSWORD = (By.XPATH, '//*[@id="login-form"]//*[@name = "password"]')
-    SUBMIT_LOGIN = (By.XPATH, '//*[@id="login-form"]//button[@id="submit-login"]')
+    SUBMIT_LOGIN = (By.XPATH, '//form[@id="login-form"]//button[contains(text(), "Intra in cont")]')
     ERROR_MESSAGE = (By.XPATH, '//section[@class="login-form"]//div[@class="help-block"]//ul//li')
-    LOGOUT_BUTTON = (By.XPATH, '//*[@id="content"]/div/div[1]/a[8]')
+    # MY_ACCOUNT_DROPDOWN = (By.XPATH, '//div[@class="col col-auto col-header-right text-right"]'
+    #                                  '//div[@id="user_info"]//div[@class="dropdown"]')
 
     def open_home_page(self):
         self.chrome.get("https://dataspot.ro/")
@@ -22,23 +27,37 @@ class Homepage_authentication(Browser):
                 if login_button:
                     login_button.click()
                     break
-                else:
-                    raise AssertionError("Login button element not found")
             except Exception as i:
-                logging.error(f"An error occurred while clicking the login button : {str(i)}")
-                attempts += 1
+                logging.error(f"An error occurred while clicking the login button: {str(i)}")
+            else:
+                raise AssertionError("Login button element not found")
+            attempts += 1
 
     def insert_email(self):
         try:
-            user_email = self.chrome.find_element(*self.EMAIL_ADDRESS)
-            user_email.send_keys("robertb.0629@gmail.com")
+            wait = WebDriverWait(self.chrome,20)
+            user_email_element = wait.until(
+                EC.element_to_be_clickable((By.NAME, "email")))
+            actions = ActionChains(self.chrome)
+            actions.move_to_element(user_email_element).perform()
+            user_email_element.click()
+            user_email_element.send_keys("robertb.0629@gmail.com")
+        except TimeoutException:
+            print("Failed to load user email at www.dataspot.ro")
         except Exception as i:
             logging.error(f"An error occurred while inserting the email : {str(i)}")
 
     def insert_invalid_password(self, password):
         try:
-            user_password = self.chrome.find_element(*self.PASSWORD)
-            user_password.send_keys(password)
+            wait = WebDriverWait(self.chrome,30)
+            user_pass_element = wait.until(
+                EC.element_to_be_clickable((By.NAME, "password")))
+            actions = ActionChains(self.chrome)
+            actions.move_to_element(user_pass_element).perform()
+            user_pass_element.click()
+            user_pass_element.send_keys(password)
+        except TimeoutException:
+            print("Failed to load user password at www.dataspot.ro")
         except Exception as i:
             logging.error(f"An error occurred while inserting the password : {str(i)}")
 
@@ -56,8 +75,15 @@ class Homepage_authentication(Browser):
 
     def insert_password(self):
         try:
-            user_pass = self.chrome.find_element(*self.PASSWORD)
-            user_pass.send_keys("shoPPing0629")
+            wait = WebDriverWait(self.chrome, 30)
+            user_pass_element = wait.until(
+                EC.element_to_be_clickable((By.NAME, "password")))
+            actions = ActionChains(self.chrome)
+            actions.move_to_element(user_pass_element).perform()
+            user_pass_element.click()
+            user_pass_element.send_keys("shoPPing0629")
+        except TimeoutException:
+            print("Failed to load user password at www.dataspot.ro")
         except Exception as i:
             logging.error(f"An error occurred while inserting the password: {str(i)}")
 
@@ -67,17 +93,30 @@ class Homepage_authentication(Browser):
         logging.info("Test passed : Current URL matches the expected URL")
 
     def logout_page(self):
-        self.chrome.get("https://dataspot.ro/identitate")
         try:
-            logout_push = self.chrome.find_element(*self.LOGOUT_BUTTON)
-            logout_push.click()
+            my_account_button = WebDriverWait(self.chrome, 20).until(
+                EC.element_to_be_clickable((By.LINK_TEXT, 'Contul meu')))
+            actions = ActionChains(self.chrome)
+            actions.move_to_element(my_account_button).perform()
+            my_account_button.click()
+            logout_button = WebDriverWait(self.chrome, 20).until(
+                EC.element_to_be_clickable((By.LINK_TEXT, 'Logout')))
+            actions = ActionChains(self.chrome)
+            actions.move_to_element(logout_button).perform()
+            logout_button.click()
         except Exception as i:
             logging.error(f"An error occurred while clicking the logout button : {str(i)}")
 
     def insert_invalid_email(self, email_address):
         try:
-            invalid_email = self.chrome.find_element(*self.EMAIL_ADDRESS)
-            invalid_email.send_keys(email_address)
+            invalid_email_element = WebDriverWait(self.chrome, 20).until(
+                EC.element_to_be_clickable((By.NAME, "email")))
+            actions = ActionChains(self.chrome)
+            actions.move_to_element(invalid_email_element).perform()
+            invalid_email_element.click()
+            invalid_email_element.send_keys(email_address)
+        except TimeoutException:
+            print("Failed to load user password at www.dataspot.ro")
         except Exception as i:
             logging.error(f"An error occurred while inserting the email : {str(i)}")
 
