@@ -80,7 +80,7 @@ class Homepage_registration(Browser):
         try:
             v_name = self.chrome.find_element(*self.FIRSTNAME_LASTNAME)
             v_name.clear()
-            v_name.send_keys("Gheoghe Moldoveanu")
+            v_name.send_keys("Abecede Eefgehas")
         except Exception as i:
             logging.error(f"An error occurred while inserting the firstname and lastname : {str(i)}")
 
