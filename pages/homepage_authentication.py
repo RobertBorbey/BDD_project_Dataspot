@@ -12,8 +12,6 @@ class Homepage_authentication(Browser):
     PASSWORD = (By.XPATH, '//*[@id="login-form"]//*[@name = "password"]')
     SUBMIT_LOGIN = (By.XPATH, '//form[@id="login-form"]//button[contains(text(), "Intra in cont")]')
     ERROR_MESSAGE = (By.XPATH, '//section[@class="login-form"]//div[@class="help-block"]//ul//li')
-    # MY_ACCOUNT_DROPDOWN = (By.XPATH, '//div[@class="col col-auto col-header-right text-right"]'
-    #                                  '//div[@id="user_info"]//div[@class="dropdown"]')
 
     def open_home_page(self):
         self.chrome.get("https://dataspot.ro/")
