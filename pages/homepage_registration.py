@@ -5,7 +5,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from browser import Browser
 import logging
 from faker import Faker
-
 fake = Faker()
 
 class Homepage_registration(Browser):
