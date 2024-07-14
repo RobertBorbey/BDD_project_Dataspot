@@ -6,7 +6,7 @@ In this project I will be implementing positive and negative tests for the follo
 - Search box
 - Sort By
 
-# How to use and clone the project? How to run the tests and how to access the reports?
+# How to use and clone the project? How to run the tests and access the reports?
 
 1. _To utilize the project_, open it in PyCharm and ensure all dependencies are installed. 
 This can be done by running the following command in the terminal: _pip install -r requirements.txt_ . It is recommended to create a virtual environment (venv)
