@@ -1,6 +1,6 @@
 # Automated Testing Project - BDD (Behavior-Driven Development) - Borbey Robert - Dataspot.ro
 
-In this project I will be implementing positive and negative tests for the following functionalities:
+In this project I will be implementing positive and negative tests for the following functionalities :
 
 - Authentication
 - Registration
